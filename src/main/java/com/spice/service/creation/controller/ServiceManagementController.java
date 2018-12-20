@@ -37,6 +37,10 @@ public class ServiceManagementController {
 	@Autowired
 	private ServiceManagement serviceManagement;
 	
+	@RequestMapping(value = "/hello")
+	public void hello(){
+		System.out.println("HOIIIIIIIIIIIIIIII");
+	}
 	@RequestMapping(value = "/updateServiceStatus", method = RequestMethod.POST)
 	public ResponseObj updatesServiceStatus(@RequestBody ServiceStatus serviceStatus ) throws Exception{
 		return serviceManagement.updatesServiceStatus(serviceStatus);

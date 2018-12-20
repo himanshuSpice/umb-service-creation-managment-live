@@ -25,7 +25,7 @@ public class UtilityData {
 	//private static final String ALPHA_NUM = "0123456789";
 
 	public String getMD5(String input) throws NoSuchAlgorithmException {
-		 		input=input+salt;
+		 					input=input+salt;
 	            MessageDigest md = MessageDigest.getInstance("MD5");
 	            byte[] messageDigest = md.digest(input.getBytes());
 	            BigInteger number = new BigInteger(1, messageDigest);
